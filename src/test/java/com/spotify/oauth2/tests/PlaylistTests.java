@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.*;
 @Feature("Playlist API")
 public class PlaylistTests extends BaseTest {
 
-   // private volatile static String playlistId;
+    // private volatile static String playlistId;
 
     @Story("Create a playlist story")
     @Link("https://example.org")
@@ -34,7 +34,7 @@ public class PlaylistTests extends BaseTest {
 
         Response response = PlaylistApi.postMethod(playListRequest);
         statusAssertCode(response, StatusCode.CODE_201.CODE);
-      //  assertThat(response.statusCode(), equalTo(201));
+        //  assertThat(response.statusCode(), equalTo(201));
 
         PlayListMain responsePlayList = response.as(PlayListMain.class);
         //playlistId = responsePlayList.getId();
@@ -117,7 +117,7 @@ public class PlaylistTests extends BaseTest {
     }
 
     @Step
-    private void assertErrorCase(PlayListError playListErrorResponse, int statusCode, String errorMessage){
+    private void assertErrorCase(PlayListError playListErrorResponse, int statusCode, String errorMessage) {
         assertThat(playListErrorResponse.getInnerError().getStatus(), equalTo(statusCode));
         assertThat(playListErrorResponse.getInnerError().getMessage(), equalTo(errorMessage));
     }

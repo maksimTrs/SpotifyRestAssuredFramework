@@ -1,17 +1,18 @@
 package com.spotify.oauth2.pojo;
 
-import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.Value;
 import lombok.extern.jackson.Jacksonized;
 
 import java.util.List;
 
 
 //@Value
-@Getter @Setter
+@Getter
+@Setter
 @Jacksonized
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -30,7 +31,7 @@ public class PlayListMain {
     private String snapshotId;
 
     //@JsonIgnore
-   // @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+    // @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     @JsonProperty("collaborative")
     private Boolean collaborative;
 

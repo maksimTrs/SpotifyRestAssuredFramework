@@ -30,7 +30,7 @@ public class SpecBuilder {
 
         return new RequestSpecBuilder()
                 .setBaseUri(System.getProperty("TOKEN_BASE_URI"))
-               // .setBaseUri("https://accounts.spotify.com")
+                // .setBaseUri("https://accounts.spotify.com")
                 .setContentType(ContentType.URLENC)
                 .addFilter(new AllureRestAssured())
                 .log(LogDetail.ALL)
