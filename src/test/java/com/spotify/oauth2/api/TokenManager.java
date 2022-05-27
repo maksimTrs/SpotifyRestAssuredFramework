@@ -24,6 +24,7 @@ public class TokenManager {
                 System.out.println("Token is up to date");
             }
         } catch (Exception exception) {
+            exception.printStackTrace();
             throw new RuntimeException("Failed to get Token!");
         }
         return access_token;
