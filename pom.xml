@@ -146,7 +146,7 @@
                 <version>3.0.0-M6</version>
                 <configuration>
                     <parallel>methods</parallel>
-                    <threadCount>4</threadCount>
+                    <threadCount>2</threadCount>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
